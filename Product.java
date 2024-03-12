@@ -6,20 +6,20 @@ public abstract class Product
     // fields
     protected String name;
     protected String[] ingredients;
-    protected ArrayList<BodyCare> bodyCareProducts;
+    protected ArrayList<BodyCare> bodyCare;
     
     // CONSTRUCTORS
     public Product()
     {
         this.name = "unknown";
-        bodyCareProducts = new ArrayList<>();
+        bodyCare = new ArrayList<>();
     } // end of product()
     
     public Product(String name, String[] ingredients)
     {
         this.name = name;
         this.ingredients = ingredients;
-        bodyCareProducts = new ArrayList<>();
+        bodyCare = new ArrayList<>();
     } // end of ingredients()
     
     // GETTERS
@@ -34,9 +34,9 @@ public abstract class Product
         return this.ingredients;
     } // end of getIngredients()
     
-    public ArrayList<BodyCare> getBodyCareProducts()
+    public ArrayList<BodyCare> getBodyCare()
     {
-        return this.bodyCareProducts;
+        return this.bodyCare;
     } // end of getBodyCareProducts()
     
     // SETTERS
@@ -51,16 +51,16 @@ public abstract class Product
         this.ingredients = ingredients;
     } // end of setIngredients()
     
-    public void setBodyCareProducts(ArrayList<BodyCare> bodyCareProducts)
+    public void setBodyCare(ArrayList<BodyCare> bodyCare)
     {
-        this.bodyCareProducts = bodyCareProducts;
+        this.bodyCare = bodyCare;
     } // end of getBodyCareProducts()
     
     // Utility Methods
 
-    public void addBodyCareProduct(BodyCare bodyCareProduct)
+    public void addBodyCare(BodyCare bodyCare)
     {
-        bodyCareProducts.add(bodyCareProduct);
+        this.bodyCare.add(bodyCare);
     } // end of addBodyCareProduct()
     
     @Override

@@ -1,33 +1,65 @@
-
-/**
- * Write a description of class BodyCareProducts here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class BodyCareProducts
+public class BodyCareProducts extends BodyCare
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class BodyCareProducts
-     */
+    // fields
+    protected String subType;
+    protected String[] fragrance;
+    protected boolean active;
+    private BodyCare bodycare;
+    
+    // constructor
     public BodyCareProducts()
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+        this.active = false;
+        this.subType = "unknown";
+        this.fragrance = null;
+    } // end of no-arg constructor
+    
+    public BodyCareProducts(String name, String[] ingredients, String type, String subType, String[] fragrance, boolean active)
     {
-        // put your code here
-        return x + y;
-    }
-}
+        super(name, ingredients, type);
+        this.subType = subType;
+        this.fragrance = fragrance;
+        this.active = active;
+    } // end of full-arg constructor
+    
+    // GETTERS
+    public String getSubType()
+    {
+        return this.subType;
+    } // end of getSubType
+    
+    public String[] getFragrance()
+    {
+        return this.fragrance;
+    } // end of getFragrance()
+    
+    public boolean isActive()
+    {
+        return active;
+    } // end of isActive()
+    
+    // SETTERS
+    public void setSubType(String subType)
+    {
+        this.subType = subType;
+    } // end of setSybStype()
+    
+    public void setFragrance(String[] fragrance)
+    {
+        this.fragrance = fragrance;
+    } // end of setFragrance()
+    
+    public void setActive(boolean active)
+    {
+        this.active = active;
+    } // end of setActive
+    
+    // Utility methods
+    @Override
+    public String toString()
+    {
+        return this.bodyCare + "\nCategory: " + this.subType + " , Fragrance: " + this.fragrance.toString() + ", Active: " + active;
+    } // end of toString
+    
+    
+} // end of class
